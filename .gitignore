@@ -5,7 +5,7 @@ db.sqlite3
 *.pyo
 .tox/
 __pycache__
- web/__pycache__/*.py[co]
+web/__pycache__/*.py[co]
 MANIFEST
 dist/
 docs/_build/
