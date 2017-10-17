@@ -5,13 +5,14 @@ from django.contrib.auth.models import User
 
 
 # Create your models here.
-class KharjHa(models.Model):
+class Expense(models.Model):
     text = models.CharField(max_length=255)
     date = models.DateTimeField()
     amount = models.BigIntegerField()
     user = models.ForeignKey(User)
-    def _str_(self):
-        return "{}-{}".format(self.text, self.amount)
+    def __str__(self):
+        return "{} |--<<>>--| {} |--<<>>--| {:,} Toman".format(self.text,self.date, self.amount)
+
 
 class Phone(models.Model):
     fname = models.CharField(max_length=50)
@@ -23,5 +24,5 @@ class Income(models.Model):
     date = models.DateTimeField()
     amount = models.BigIntegerField()
     user = models.ForeignKey(User)
-    def __unicode__(self):
-        return self.text
+    def __str__(self):
+        return "{} |--<<>>--| {} |--<<>>--| {:,} Toman".format(self.text,self.date, self.amount)

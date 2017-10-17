@@ -1,9 +1,11 @@
 db.sqlite3
 *.egg-info
 *.pot
-*.py[co]
+*.pyc
+*.pyo
 .tox/
 __pycache__
+ web/__pycache__/*.py[co]
 MANIFEST
 dist/
 docs/_build/
