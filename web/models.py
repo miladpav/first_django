@@ -11,3 +11,9 @@ class Phone(models.Model):
     fname = models.CharField(max_length=50)
     lname = models.CharField(max_length=50)
     phone_number = models.IntegerField()
+
+class Income(models.Model):
+    text = models.CharField(max_length=255)
+    date = models.DateTimeField()
+    amount = models.BigIntegerField()
+    user = models.ForeignKey(User)
